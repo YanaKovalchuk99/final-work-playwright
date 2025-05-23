@@ -8,6 +8,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - run: npm ci
+      - run: npx playwright install --with-deps
       - run: npx playwright test --list
       - run: npx playwright test
 
